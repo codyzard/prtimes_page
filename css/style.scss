@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "PRTimes";
+  src: url("/fonts/NotoSansCJKjp-Black.woff"),
+    url("/fonts/NotoSansCJKjp-Bold.woff"),
+    url("/fonts/NotoSansCJKjp-Regular.woff"), url("/fonts/PRTimes.woff"),
+    url("/fonts/YakuHanJPs-Light.woff");
+}
+$prtimes_color: #2c4c7c;
+$prtimes_black: #484848;
+$white: white;
+* {
+  font-family: sans-serif, "PRTimes";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 16px;
+}
+.wrapper {
+  header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: $white;
+    .header_bg {
+      width: 0;
+      height: 0;
+      border-top: 30px solid $prtimes_color;
+      border-bottom: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+    nav {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 30px;
+      .logo {
+        display: flex;
+        width: 30%;
+        img {
+          width: 160px;
+          height: 60px;
+        }
+        p {
+          text-transform: uppercase;
+          color: $prtimes_color;
+          font-weight: 700;
+          padding: 24px 7px 0 7px;
+          font-size: 12px;
+        }
+      }
+      .menu {
+        padding: 21px 0;
+        width: auto;
+        .menu_item {
+          display: inline-block;
+          text-decoration: none;
+          color: $prtimes_black;
+          font-size: 14px;
+          padding: 0 10px;
+          font-weight: bolder;
+        }
+      }
+      .mobile_menu_btn {
+        padding: 21px 0;
+        display: none;
+        #open_mobile_menu {
+          color: $prtimes_color;
+        }
+        #close_mobile_menu {
+          color: $prtimes_color;
+          display: none;
+        }
+      }
+      .mobile_menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: -1000px;
+        left: -1000px;
+        background-color: $prtimes_color;
+        width: 100%;
+        height: 100vh;
+        .mobile_menu_item {
+          display: inline-block;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1085px) {
+  .wrapper {
+    header {
+      nav {
+        .logo {
+          width: 20%;
+          flex-direction: column;
+          p {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  .wrapper {
+    header {
+      nav {
+        padding: 10px 10px;
+        .menu {
+          display: none;
+        }
+        .mobile_menu_btn {
+          display: block;
+          #open_mobile_menu {
+            position: absolute;
+            right: 5%;
+            top: 32%;
+          }
+        }
+        .logo {
+          width: 100%;
+          flex-direction: row;
+          p {
+            padding: 24px 7px 0 7px;
+          }
+        }
+      }
+    }
+  }
+}
