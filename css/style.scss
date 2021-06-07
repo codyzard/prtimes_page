@@ -9,7 +9,7 @@ $prtimes_color: #2c4c7c;
 $prtimes_black: #484848;
 $white: white;
 * {
-  font-family: sans-serif, "PRTimes";
+  font-family: "PRTimes", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,11 +24,64 @@ $white: white;
     justify-content: space-between;
     background-color: $white;
     .header_bg {
-      width: 0;
-      height: 0;
-      border-top: 30px solid $prtimes_color;
-      border-bottom: 30px solid transparent;
-      border-right: 30px solid transparent;
+      position: fixed;
+      .mobile_menu {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 80px;
+        left: 35px;
+        background-color: $prtimes_color;
+        width: 100%;
+        height: 100vh;
+        .mobile_menu_item {
+          display: inline-block;
+          color: $white;
+          padding: 8px 15px;
+          font-size: 1.3rem;
+        }
+        .mobile_menu_footer {
+          position: absolute;
+          bottom: 100px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .social_items {
+            width: 30%;
+            .social_item {
+              display: inline-block;
+              text-decoration: none;
+              color: $white;
+              padding: 0 5px;
+              .fa-facebook-f::before,
+              .fa-twitter::before,
+              .fa-instagram::before {
+                font-size: 20px;
+              }
+            }
+          }
+          .company_service{
+            width: 190px;
+            float: right;
+            a{
+              text-decoration: none;
+              color: $white;
+            }
+          }
+        }
+      }
+      &::before {
+        content: "";
+        position: relative;
+        width: 0px;
+        height: 0px;
+        top: 0;
+        left: 0;
+        display: block;
+        border-top: 30px solid $prtimes_color;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid transparent;
+      }
     }
     nav {
       position: relative;
@@ -64,28 +117,54 @@ $white: white;
         }
       }
       .mobile_menu_btn {
+        position: relative;
         padding: 21px 0;
         display: none;
         #open_mobile_menu {
           color: $prtimes_color;
+          position: absolute;
+          right: 5px;
+          top: 32%;
         }
         #close_mobile_menu {
-          color: $prtimes_color;
-          display: none;
+          color: $white;
+          position: absolute;
+          right: 8px;
+          top: 32%;
+          visibility: hidden;
         }
       }
-      .mobile_menu {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: -1000px;
-        left: -1000px;
-        background-color: $prtimes_color;
-        width: 100%;
-        height: 100vh;
-        .mobile_menu_item {
-          display: inline-block;
-          color: $white;
+    }
+  }
+  .container{
+    .hero_grid{
+      padding: 5% 0;
+      color: $prtimes_color;
+      .description{
+        padding: 0 10%;
+        padding-bottom: 3%;
+        h1{
+          font-size: 4.2rem;
+        }
+        h3{
+          font-size: 2rem;
+          span{
+            display: block;
+            font-size: 2rem;
+          }
+        }
+      }
+      .slide{
+        .slide_list{
+          height: 150vh;
+          .slide_item{
+            background: url('/image/1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -116,20 +195,38 @@ $white: white;
         }
         .mobile_menu_btn {
           display: block;
-          #open_mobile_menu {
-            position: absolute;
-            right: 5%;
-            top: 32%;
-          }
         }
         .logo {
           width: 100%;
           flex-direction: row;
+          padding: 0 25px;
           p {
             padding: 24px 7px 0 7px;
           }
         }
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(
+      to right bottom,
+      $prtimes_color,
+      $prtimes_color
+    );
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right bottom,
+      $prtimes_color,
+      $prtimes_color
+    );
   }
 }
