@@ -1375,18 +1375,16 @@ a {
             top: 40px;
             border-left: 9px solid transparent;
             border-bottom: 11px solid white;
-            // animation: T_animation_mobile 0.7s forwards;
-            // animation-delay: 1s;
-            animation: none;
+            animation: T_animation_mobile 0.7s forwards;
+            animation-delay: 1s;
           }
           &::after {
             left: 107px;
             top: 10px;
             border-left: 9px solid transparent;
             border-bottom: 11px solid white;
-            // animation: T_animation_mobile 0.7s forwards;
-            // animation-delay: 1s;
-            animation: none;
+            animation: T_animation_mobile 0.7s forwards;
+            animation-delay: 1s;
           }
         }
       }
