@@ -1013,7 +1013,7 @@ a {
     left: 120px; }
     .wrapper footer .footer_sitemap .footer_sitemap_list .footer_sitemap_item {
       font-size: 0.75rem; } }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .wrapper .container .loading h1 {
     font-size: 3.2rem; }
     .wrapper .container .loading h1::before {
