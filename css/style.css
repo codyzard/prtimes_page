@@ -1014,6 +1014,22 @@ a {
     .wrapper footer .footer_sitemap .footer_sitemap_list .footer_sitemap_item {
       font-size: 0.75rem; } }
 @media (max-width: 400px) {
+  .wrapper .container .loading h1 {
+    font-size: 3.2rem; }
+    .wrapper .container .loading h1::before {
+      left: 83px;
+      top: 40px;
+      border-left: 9px solid transparent;
+      border-bottom: 11px solid white;
+      animation: T_animation_mobile 0.7s forwards;
+      animation-delay: 1s; }
+    .wrapper .container .loading h1::after {
+      left: 107px;
+      top: 10px;
+      border-left: 9px solid transparent;
+      border-bottom: 11px solid white;
+      animation: T_animation_mobile 0.7s forwards;
+      animation-delay: 1s; }
   .wrapper .container .hero_grid .description h1 {
     font-size: 2.2rem; }
   .wrapper .container .hero_grid .description h3 {
@@ -1096,6 +1112,12 @@ a {
     border-bottom: 25px solid white; }
   100% {
     top: 50px; } }
+@keyframes T_animation_mobile {
+  0% {
+    border-left: 9px solid transparent;
+    border-bottom: 11px solid white; }
+  100% {
+    top: 30px; } }
 @keyframes header_fadeIn {
   100% {
     z-index: 9; } }

@@ -146,7 +146,6 @@ a {
 }
 .cursor_pointer_orange {
   cursor: pointer;
-  
 }
 .wrapper {
   header {
@@ -1368,6 +1367,27 @@ a {
 @media (max-width: 400px) {
   .wrapper {
     .container {
+      .loading {
+        h1 {
+          font-size: 3.2rem;
+          &::before {
+            left: 83px;
+            top: 40px;
+            border-left: 9px solid transparent;
+            border-bottom: 11px solid white;
+            animation: T_animation_mobile 0.7s forwards;
+            animation-delay: 1s;
+          }
+          &::after {
+            left: 107px;
+            top: 10px;
+            border-left: 9px solid transparent;
+            border-bottom: 11px solid white;
+            animation: T_animation_mobile 0.7s forwards;
+            animation-delay: 1s;
+          }
+        }
+      }
       .hero_grid {
         .description {
           h1 {
@@ -1523,6 +1543,15 @@ a {
   }
   100% {
     top: 50px;
+  }
+}
+@keyframes T_animation_mobile {
+  0% {
+    border-left: 9px solid transparent;
+    border-bottom: 11px solid white;
+  }
+  100% {
+    top: 30px;
   }
 }
 @keyframes header_fadeIn {
