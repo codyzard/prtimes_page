@@ -125,7 +125,9 @@ a {
   top: 0;
   justify-content: space-between;
   background-color: white;
-  z-index: 9; }
+  z-index: 2;
+  animation: header_fadeIn 1s forwards;
+  animation-delay: 4.5s; }
   .wrapper header .header_bg {
     position: fixed;
     top: 0; }
@@ -225,6 +227,49 @@ a {
         right: 8px;
         top: 30%;
         visibility: hidden; }
+.wrapper .container .loading {
+  background-color: #2c4c7c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loading_fadeOut 2s forwards;
+  animation-delay: 2.5s; }
+  .wrapper .container .loading h1 {
+    position: relative;
+    color: white;
+    font-size: 6rem;
+    animation: loading 0.7s ease-in-out; }
+    .wrapper .container .loading h1::before {
+      content: "";
+      position: absolute;
+      left: 147px;
+      top: 70px;
+      display: inline-block;
+      animation: T_animation 0.7s forwards;
+      width: 0;
+      z-index: -1;
+      border-left: 16px solid transparent;
+      border-bottom: 25px solid white;
+      animation-delay: 1s; }
+    .wrapper .container .loading h1::after {
+      content: "";
+      position: absolute;
+      left: 187px;
+      top: 18px;
+      transform: rotate(180deg);
+      display: inline-block;
+      border-left: 16px solid transparent;
+      border-bottom: 25px solid white;
+      animation: T_animation 0.7s forwards;
+      animation-delay: 1s;
+      width: 0;
+      z-index: -1; }
 .wrapper .container .hero_grid {
   padding: 100px 0;
   color: #2c4c7c;
@@ -253,8 +298,8 @@ a {
     z-index: 2; }
     .wrapper .container .hero_grid .slide .slide_cover:hover ~ .slide_des .line_animation_2 {
       padding: 0 35px; }
-    .wrapper .container .hero_grid .slide .slide_des:hover ~ .slide_cover {
-      transform: scaleY(1.03); }
+    .wrapper .container .hero_grid .slide .slide_des:hover ~ .slide_cover img {
+      transform: scale(1.03); }
     .wrapper .container .hero_grid .slide .carousel {
       position: absolute;
       top: -60px;
@@ -1032,5 +1077,27 @@ a {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to right bottom, #2c4c7c, #2c4c7c); } }
+@keyframes loading {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.5; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes loading_fadeOut {
+  0% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0;
+    z-index: -1; } }
+@keyframes T_animation {
+  0% {
+    border-left: 16px solid transparent;
+    border-bottom: 25px solid white; }
+  100% {
+    top: 50px; } }
+@keyframes header_fadeIn {
+  100% {
+    z-index: 9; } }
 
 /*# sourceMappingURL=style.css.map */
