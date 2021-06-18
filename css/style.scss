@@ -1517,45 +1517,45 @@ a {
     );
   }
 }
-@keyframes loading {
-  0% {
-    transform: translateY(100px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes loading_fadeOut {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes T_animation {
-  0% {
-    border-left: 16px solid transparent;
-    border-bottom: 25px solid white;
-  }
-  100% {
-    top: 50px;
-  }
-}
-@keyframes T_animation_mobile {
-  0% {
-    border-left: 9px solid transparent;
-    border-bottom: 11px solid white;
-  }
-  100% {
-    top: 30px;
-  }
-}
-@keyframes header_fadeIn {
-  100% {
-    z-index: 9;
-  }
-}
+// @keyframes loading {
+//   0% {
+//     transform: translateY(100px);
+//     opacity: 0.5;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes loading_fadeOut {
+//   0% {
+//     opacity: 0.8;
+//   }
+//   100% {
+//     opacity: 0;
+//     z-index: -1;
+//   }
+// }
+// @keyframes T_animation {
+//   0% {
+//     border-left: 16px solid transparent;
+//     border-bottom: 25px solid white;
+//   }
+//   100% {
+//     top: 50px;
+//   }
+// }
+// @keyframes T_animation_mobile {
+//   0% {
+//     border-left: 9px solid transparent;
+//     border-bottom: 11px solid white;
+//   }
+//   100% {
+//     top: 30px;
+//   }
+// }
+// @keyframes header_fadeIn {
+//   100% {
+//     z-index: 9;
+//   }
+// }
