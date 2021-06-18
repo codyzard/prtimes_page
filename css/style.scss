@@ -289,7 +289,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: loading_fadeOut 2s forwards;
+      // animation: loading_fadeOut 2s forwards;
       animation-delay: 2.5s;
       h1 {
         position: relative;
@@ -302,7 +302,7 @@ a {
           left: 147px;
           top: 70px;
           display: inline-block;
-          animation: T_animation 0.7s forwards;
+          // animation: T_animation 0.7s forwards;
           width: 0;
           z-index: -1;
           border-left: 16px solid transparent;
@@ -318,7 +318,7 @@ a {
           display: inline-block;
           border-left: 16px solid transparent;
           border-bottom: 25px solid white;
-          animation: T_animation 0.7s forwards;
+          // animation: T_animation 0.7s forwards;
           animation-delay: 1s;
           width: 0;
           z-index: -1;
