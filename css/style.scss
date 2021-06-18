@@ -289,8 +289,8 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      // animation: loading_fadeOut 2s forwards;
-      // animation-delay: 2.5s;
+      animation: loading_fadeOut 2s forwards;
+      animation-delay: 2.5s;
       h1 {
         position: relative;
         color: $white;

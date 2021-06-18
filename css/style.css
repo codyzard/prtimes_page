@@ -237,7 +237,9 @@ a {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  animation: loading_fadeOut 2s forwards;
+  animation-delay: 2.5s; }
   .wrapper .container .loading h1 {
     position: relative;
     color: white;
