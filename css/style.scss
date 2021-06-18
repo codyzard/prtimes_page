@@ -302,7 +302,7 @@ a {
           left: 147px;
           top: 70px;
           display: inline-block;
-          // animation: T_animation 0.7s forwards;
+          animation: T_animation 0.7s forwards;
           width: 0;
           z-index: -1;
           border-left: 16px solid transparent;
@@ -318,7 +318,7 @@ a {
           display: inline-block;
           border-left: 16px solid transparent;
           border-bottom: 25px solid white;
-          // animation: T_animation 0.7s forwards;
+          animation: T_animation 0.7s forwards;
           animation-delay: 1s;
           width: 0;
           z-index: -1;
@@ -1375,7 +1375,7 @@ a {
             top: 40px;
             border-left: 9px solid transparent;
             border-bottom: 11px solid white;
-            // animation: T_animation_mobile 0.7s forwards;
+            animation: T_animation_mobile 0.7s forwards;
             animation-delay: 1s;
           }
           &::after {
@@ -1383,7 +1383,7 @@ a {
             top: 10px;
             border-left: 9px solid transparent;
             border-bottom: 11px solid white;
-            // animation: T_animation_mobile 0.7s forwards;
+            animation: T_animation_mobile 0.7s forwards;
             animation-delay: 1s;
           }
         }
@@ -1517,45 +1517,45 @@ a {
     );
   }
 }
-// @keyframes loading {
-//   0% {
-//     transform: translateY(100px);
-//     opacity: 0.5;
-//   }
-//   100% {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
-// @keyframes loading_fadeOut {
-//   0% {
-//     opacity: 0.8;
-//   }
-//   100% {
-//     opacity: 0;
-//     z-index: -1;
-//   }
-// }
-// @keyframes T_animation {
-//   0% {
-//     border-left: 16px solid transparent;
-//     border-bottom: 25px solid white;
-//   }
-//   100% {
-//     top: 50px;
-//   }
-// }
-// @keyframes T_animation_mobile {
-//   0% {
-//     border-left: 9px solid transparent;
-//     border-bottom: 11px solid white;
-//   }
-//   100% {
-//     top: 30px;
-//   }
-// }
-// @keyframes header_fadeIn {
-//   100% {
-//     z-index: 9;
-//   }
-// }
+@keyframes loading {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loading_fadeOut {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes T_animation {
+  0% {
+    border-left: 16px solid transparent;
+    border-bottom: 25px solid white;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes T_animation_mobile {
+  0% {
+    border-left: 9px solid transparent;
+    border-bottom: 11px solid white;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@keyframes header_fadeIn {
+  100% {
+    z-index: 9;
+  }
+}
